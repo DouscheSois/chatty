@@ -1,0 +1,261 @@
+.App {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #222831;
+  padding: 2rem;
+}
+
+.landing {
+  background-image: url("./media/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  height: 60rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.landing-content {
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+  opacity: 0;
+  transition: opacity 1.5s;
+  padding: 1rem;
+}
+
+.landing-content:hover {
+  opacity: 1;
+  background-color: #333;
+  color: #fff;
+}
+
+.landing p {
+  font-size: 1.2rem;
+}
+
+.landing-title {
+  font-size: 2rem;
+}
+
+.landing-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.landing-links a {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  width: 15rem;
+  padding: 0.5rem;
+  background-color: #3f72af;
+  color: #fff;
+  text-decoration: none;
+}
+
+.landing-links a:hover {
+  background-color: #fff;
+  color: #3f72af;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: #f9f7f7;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 7rem;
+  margin-bottom: 2rem;
+}
+.navbar li {
+  list-style: none;
+  font-size: 6.1rem;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #333;
+  background-color: #3f72af;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar li a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+/* Registration && Login CSS */
+
+.registration,
+.login {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: #3f72af;
+  color: #333;
+  padding: 1rem;
+  text-align: center;
+  width: 30rem;
+  height: 40rem;
+}
+
+.registration-form,
+.login-form {
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+}
+
+.registration i,
+.login i {
+  font-size: 3rem;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.form-group input {
+  margin: 0.2rem;
+  padding: 0.5rem;
+  width: 18rem;
+  font-size: 1.5rem;
+}
+
+.registration-form-submit,
+.login-form-submit {
+  background-color: #333;
+  color: #fff;
+  margin-top: 1rem;
+  width: 10rem;
+  border: none;
+  padding: 1rem;
+  border: 1px solid #333;
+}
+
+.registration-form-submit:hover,
+.login-form-submit:hover {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+
+/* TOGGLE CSS */
+
+.dropdown-button {
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 3.45rem;
+}
+
+.dropdown-button i {
+  color: black;
+  opacity: 0.8;
+}
+
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.dropdown-content {
+  border: 1px solid black;
+  text-align: center;
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: black;
+  color: white;
+  min-width: 20rem;
+  opacity: 0.8;
+}
+
+.dropdown-content a {
+  font-size: 1.6rem;
+  color: white;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  opacity: 1;
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-menu:hover .dropdown-button {
+  opacity: 1;
+}
+
+/* Footnote CSS */
+.footnote {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  opacity: 0.8;
+  color: white;
+  background-color: black;
+  padding: 2rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.footnote-links {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.footnote-links a {
+  text-decoration: none;
+  color: #3f72af;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    height: 5.15rem;
+  }
+
+  .dropdown-button {
+    font-size: 2.5rem;
+  }
+  .navbar li {
+    visibility: hidden;
+  }
+
+  .registration,
+  .login {
+    padding: 0.8rem;
+    width: 20rem;
+    height: 35rem;
+  }
+
+  .registration-form,
+  .login {
+    padding: 1rem;
+  }
+
+  .form-group input {
+    width: 13rem;
+    font-size: 1.2rem;
+  }
+}
