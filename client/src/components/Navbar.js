@@ -24,6 +24,9 @@ const Navbar = () => {
         <Link to="/wall">
           <i className="fas fa-globe"></i> Wall
         </Link>
+        <Link to="/profile">
+          <i className="fas fa-id-card"></i> Profile
+        </Link>
         <a className="navbar-link" onClick={(e) => onClick(e)} href="#!">
           <i className="fas fa-sign-out-alt"></i> Logout
         </a>
@@ -41,7 +44,7 @@ const Navbar = () => {
           <i className="fas fa-user-plus"></i> Register
         </Link>
         <Link to="/login">
-          <i className="fas fa-user-plus"></i> Login
+          <i className="fas fa-user"></i> Login
         </Link>
       </div>
     </div>
@@ -50,9 +53,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <li>
-        <Link to="/wall">
-          <i className="far fa-smile"></i> Chatty
-        </Link>
+        <Link to="/wall">Chatty</Link>
       </li>
       {!isloading && <Fragment>{isAuth ? privateLinks : publicLinks}</Fragment>}
     </div>

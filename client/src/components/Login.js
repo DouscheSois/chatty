@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <div className="login">
       <form className="login-form" onSubmit={(e) => onSubmit(e)}>
-        <i className="fas fa-user-plus fa-2x"></i>
+        <i className="fas fa-user fa-2x"></i>
         <h4 className="title">Login</h4>
         <div className="form-group">
           <input
@@ -51,10 +51,11 @@ const Login = () => {
             onChange={(e) => onChange(e)}
           />
         </div>
-        <input type="submit" className="login-form-submit" value="Register" />
+        <input type="submit" className="login-form-submit" value="Login" />
         <p>
           Need have an account? <Link to="/registration">Register</Link>
         </p>
+        <small>*Any information you give to us will not be shared.</small>
       </form>
     </div>
   );

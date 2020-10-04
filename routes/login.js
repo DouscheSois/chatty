@@ -8,7 +8,7 @@ const config = require("config");
 const User = require("../models/User");
 const auth = require("../middleware/auth");
 
-// @route /auth
+// @route /login
 // @access Public
 // Needs valid token for see private route
 router.get("/", auth, async (req, res) => {

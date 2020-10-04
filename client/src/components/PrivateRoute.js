@@ -29,3 +29,5 @@ const stateToProps = (state) => ({
 });
 
 export default connect(stateToProps)(PrivateRoute);
+
+// Wanted to use connect, stateToProps for this one even though it is depricated.

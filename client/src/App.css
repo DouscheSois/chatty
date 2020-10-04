@@ -1,20 +1,58 @@
 .App {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   box-sizing: border-box;
-  background-color: #222831;
-  padding: 2rem;
+  background-color: black;
+  margin: 0;
 }
+
+.loading {
+  width: 100%;
+  text-align: center;
+}
+
+/* Navbar CSS */
+
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: #f9f7f7;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 7rem;
+  margin: 0;
+  width: 100%;
+}
+.navbar li {
+  list-style: none;
+  font-size: 6.1rem;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #333;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar li a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+/* Landing Page CSS */
 
 .landing {
   background-image: url("./media/bg1.jpg");
   background-size: cover;
   background-position: center;
-  width: 80%;
-  height: 60rem;
+  width: 60%;
   text-align: center;
   opacity: 0.8;
+  margin: 0;
 }
 
 .landing-content {
@@ -24,6 +62,11 @@
   opacity: 0;
   transition: opacity 1.5s;
   padding: 1rem;
+}
+
+.landing-content img {
+  width: 90%;
+  height: 90%;
 }
 
 .landing-content:hover {
@@ -38,6 +81,7 @@
 
 .landing-title {
   font-size: 2rem;
+  font-weight: 300;
 }
 
 .landing-links {
@@ -63,35 +107,6 @@
   color: #3f72af;
 }
 
-.navbar {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  background-color: #f9f7f7;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  height: 7rem;
-  margin-bottom: 2rem;
-}
-.navbar li {
-  list-style: none;
-  font-size: 6.1rem;
-}
-
-.navbar li a {
-  text-decoration: none;
-  color: #333;
-  background-color: #3f72af;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.navbar li a:hover {
-  color: #fff;
-  background-color: #333;
-}
-
 /* Registration && Login CSS */
 
 .registration,
@@ -99,7 +114,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  background-color: #3f72af;
+  background-color: #fff;
   color: #333;
   padding: 1rem;
   text-align: center;
@@ -109,7 +124,6 @@
 
 .registration-form,
 .login-form {
-  background-color: #fff;
   color: #333;
   padding: 1rem;
 }
@@ -128,6 +142,7 @@
   padding: 0.5rem;
   width: 18rem;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .registration-form-submit,
@@ -148,6 +163,118 @@
   border: 1px solid #333;
 }
 
+/* Wall CSS */
+.wall {
+  color: #fff;
+  background-color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.25rem;
+  height: 100%;
+  margin: 2rem;
+}
+
+.wall h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/* All Posts CSS */
+.all-posts {
+  width: 60rem;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 2px 0px rgba(250, 250, 250, 0.5);
+}
+
+/* New Post CSS */
+
+.new-post-div {
+  margin-bottom: 10rem;
+  height: 100%;
+}
+
+.new-post-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+  width: 60rem;
+  border-radius: 0.5rem;
+  height: 250px;
+}
+.new-post-form textarea {
+  outline: none;
+  resize: none;
+  font-size: 1.5rem;
+  width: 50rem;
+  height: 100%;
+  background-color: #fff;
+  color: #333;
+}
+
+.new-post-form input {
+  width: 15rem;
+  height: 3rem;
+  outline: none;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #3f72af;
+  color: #fff;
+  transition: background-color 1s;
+}
+
+.new-post-form input:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Post Item CSS */
+
+.post-item {
+  width: 80%;
+  border: 1px solid #333;
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.post-item p {
+  margin: 0;
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.post-item-small {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border-top: 1px solid #333;
+  padding: 0.5rem;
+  background-color: #3f72af;
+  color: #fff;
+}
+/* Profile CSS */
+
+.profile {
+  color: #333;
+  border: 1px solid black;
+  width: 100%;
+  height: 10rem;
+  text-align: center;
+  background-color: #fff;
+}
+
 /* TOGGLE CSS */
 
 .dropdown-button {
@@ -158,8 +285,8 @@
 }
 
 .dropdown-button i {
-  color: black;
-  opacity: 0.8;
+  color: #333;
+  opacity: 1;
 }
 
 .dropdown-menu {
@@ -191,7 +318,6 @@
 .dropdown-content a:hover {
   background-color: white;
   color: black;
-  border: 1px solid black;
   opacity: 1;
 }
 
@@ -209,11 +335,13 @@
   flex-wrap: wrap;
   justify-content: space-around;
   opacity: 0.8;
-  color: white;
-  background-color: black;
+  color: #333;
+  background-color: #f9f7f7;
   padding: 2rem;
   margin-top: 1rem;
   font-size: 1.5rem;
+  margin: 0;
+  width: 100%;
 }
 
 .footnote-links {
@@ -230,16 +358,9 @@
   margin-top: 2rem;
 }
 
-@media (max-width: 800px) {
-  .navbar {
-    height: 5.15rem;
-  }
-
-  .dropdown-button {
-    font-size: 2.5rem;
-  }
-  .navbar li {
-    visibility: hidden;
+@media (max-width: 1050px) {
+  .navbar li a {
+    display: none;
   }
 
   .registration,
@@ -257,5 +378,31 @@
   .form-group input {
     width: 13rem;
     font-size: 1.2rem;
+  }
+
+  .new-post-form {
+    width: 95%;
+    border-radius: 0.5rem;
+  }
+  .new-post-form textarea {
+    width: 100%;
+  }
+
+  .new-post-form input {
+    width: 100%;
+  }
+
+  .new-post-form textarea {
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .post-item {
+    width: 100%;
+  }
+
+  .all-posts {
+    width: 90%;
   }
 }

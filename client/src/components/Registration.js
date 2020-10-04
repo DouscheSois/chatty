@@ -98,6 +98,7 @@ const Registration = () => {
         <p>
           Already have an account? <Link to="/login">Sign In</Link>
         </p>
+        <small>*Any information you give to us will not be shared.</small>
       </form>
     </div>
   );

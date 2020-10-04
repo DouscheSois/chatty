@@ -7,6 +7,7 @@ import Footnote from "./components/Footnote";
 import Registration from "./components/Registration";
 import Login from "./components/Login";
 import Wall from "./components/Wall";
+import Profile from "./components/Profile";
 
 import PrivateRoute from "./components/PrivateRoute";
 import "./App.css";
@@ -26,22 +27,21 @@ const App = () => {
     store.dispatch(loadUser());
   }, []);
   return (
-    <Fragment>
-      <Provider store={store}>
-        <Router>
+    <Provider store={store}>
+      <Router>
+        <div className="App">
           <Navbar />
-          <div className="App">
-            <Switch>
-              <Route exact path="/" component={Landing} />
-              <Route exact path="/registration" component={Registration} />
-              <Route exact path="/login" component={Login} />
-              <PrivateRoute exact path="/wall" component={Wall} />
-            </Switch>
-          </div>
+          <Route exact path="/" component={Landing} />
+          <Switch>
+            <Route exact path="/registration" component={Registration} />
+            <Route exact path="/login" component={Login} />
+            <PrivateRoute exact path="/wall" component={Wall} />
+            <PrivateRoute exact path="/profile" component={Profile} />
+          </Switch>
           <Footnote />
-        </Router>
-      </Provider>
-    </Fragment>
+        </div>
+      </Router>
+    </Provider>
   );
 };
 export default App;

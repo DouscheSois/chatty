@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const auth = require("../middleware/auth");
+const paginatedResults = require("../middleware/paginatedResults");
 const { check, validationResult } = require("express-validator");
 
 const User = require("../models/User");
@@ -22,7 +23,7 @@ router.post(
       const user = await User.findById(req.user.id).select("-password");
 
       const newEntry = new Entry({
-        name: user.name,
+        name: user.firstName,
         text: req.body.text,
         user: req.user.id,
       });
@@ -35,5 +36,19 @@ router.post(
     }
   }
 );
+
+// @Route GET /entry
+// Private (Needs auth middleware)
+// Gets all the entries once logged in
+
+router.get("/", auth, async (req, res) => {
+  try {
+    const entries = await Entry.find().sort({ date: -1 });
+    res.json(entries);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error with Getting the Entries");
+  }
+});
 
 module.exports = router;
