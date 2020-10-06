@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import dayjs from "dayjs";
 
-const PostItem = ({ post: { _id, name, text, date } }) => {
+const PostItem = ({ entry: { _id, name, text, date } }) => {
   useSelector((state) => state.auth);
 
   const newDate = dayjs(date).format("MMMM D @ h:mm A");

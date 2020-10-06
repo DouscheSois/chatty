@@ -11,6 +11,31 @@
   width: 100%;
   text-align: center;
 }
+/* Pagination CSS */
+.pagination {
+  width: 100%;
+  background-color: lightgrey;
+}
+
+.pagination ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.pagination ul li {
+  list-style: none;
+}
+
+.pagination ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: 1px solid white;
+  padding: 0.2rem;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+  background-color: #3f72af;
+  color: #fff;
+}
 
 /* Navbar CSS */
 
@@ -199,13 +224,12 @@
 /* New Post CSS */
 
 .new-post-div {
-  margin-bottom: 10rem;
   height: 100%;
 }
 
 .new-post-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   padding: 0.5rem;
   width: 60rem;
@@ -215,19 +239,19 @@
 .new-post-form textarea {
   outline: none;
   resize: none;
-  font-size: 1.5rem;
-  width: 50rem;
-  height: 100%;
+  font-size: 2rem;
+  width: 80%;
+  height: 3.5rem;
   background-color: #fff;
   color: #333;
+  border: none;
 }
 
 .new-post-form input {
-  width: 15rem;
-  height: 3rem;
+  width: 25%;
+  height: 3.8rem;
   outline: none;
-  margin-top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-radius: 0.5rem;
   background-color: #3f72af;
   color: #fff;
@@ -381,21 +405,17 @@
   }
 
   .new-post-form {
+    flex-wrap: wrap;
     width: 95%;
     border-radius: 0.5rem;
   }
   .new-post-form textarea {
     width: 100%;
+    height: 50%;
   }
 
   .new-post-form input {
     width: 100%;
-  }
-
-  .new-post-form textarea {
-    font-size: 1.5rem;
-    width: 100%;
-    height: 100%;
   }
 
   .post-item {

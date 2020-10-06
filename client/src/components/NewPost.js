@@ -27,12 +27,12 @@ const NewPost = () => {
       >
         <textarea
           className="form-group"
-          placeholder="Share what you have to say here.."
+          placeholder="type here.."
           value={text}
           onChange={(e) => setText(e.target.value)}
           onKeyPress={submit}
         ></textarea>
-        <input type="submit" className="new-post-form-submit" value="Share" />
+        <input type="submit" className="new-post-form-submit" value="Enter" />
       </form>
     </div>
   );

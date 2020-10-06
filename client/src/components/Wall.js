@@ -7,7 +7,7 @@ const Wall = () => {
   return (
     <div className="wall">
       <h2>
-        Share a comment ...<i className="far fa-comment-alt fa-2x"></i>
+        Start Chatting ...<i className="far fa-comment-alt fa-2x"></i>
       </h2>
       <NewPost />
       <AllPosts />

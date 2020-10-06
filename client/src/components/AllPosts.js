@@ -4,10 +4,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { getEntries } from "../actions/entry";
 
 import PostItem from "./PostItem";
+import Pagination from "./Pagination";
 
 const AllPosts = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(25);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,19 +20,30 @@ const AllPosts = () => {
   const entries = useSelector((state) => state.entry.entries);
 
   //Pagination Logic
-  const indexOfLastPost = currentPage * limit;
-  const indexOfFirstPost = indexOfLastPost - limit;
-  const currentPosts = entries.slice(indexOfFirstPost, indexOfLastPost);
+  const indexOfLastEntry = currentPage * limit;
+  const indexOfFirstEntry = indexOfLastEntry - limit;
+  const currentEntries = entries.slice(indexOfFirstEntry, indexOfLastEntry);
 
-  console.log(currentPosts);
+  // Change Page
+  const newPaginate = (pageNumber, e) => {
+    e.preventDefault();
+    setCurrentPage(pageNumber);
+  };
+
+  console.log(currentEntries);
 
   return isloading ? (
     <h1 className="loading">Loading...</h1>
   ) : (
     <div className="all-posts">
-      {currentPosts.map((post) => (
-        <PostItem post={post} key={post._id} />
+      {currentEntries.map((entry) => (
+        <PostItem entry={entry} key={entry._id} />
       ))}
+      <Pagination
+        limit={limit}
+        totalEntries={entries.length}
+        paginate={newPaginate}
+      />
     </div>
   );
 };

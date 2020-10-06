@@ -1,3 +1,1 @@
-getEntries get called before loadUser and it causes not to load all posts.
 
-on Postman we have pagination but not on the client!. Fix that.

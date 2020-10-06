@@ -14,7 +14,6 @@ export const addEntry = (formData) => async (send) => {
       type: ADD_ENTRY,
       payload: res.data,
     });
-    alert("Post Created");
     send(getEntries());
   } catch (err) {
     send({
