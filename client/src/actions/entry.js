@@ -14,7 +14,6 @@ export const addEntry = (formData) => async (send) => {
       type: ADD_ENTRY,
       payload: res.data,
     });
-    send(getEntries());
   } catch (err) {
     send({
       type: ENTRY_ERROR,
@@ -25,7 +24,7 @@ export const addEntry = (formData) => async (send) => {
 
 export const getEntries = () => async (send) => {
   try {
-    const res = await axios.get(`/entry?page=${1}&limit=${5}`);
+    const res = await axios.get(`/entry`);
 
     send({
       type: GET_ENTRIES,
