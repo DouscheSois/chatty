@@ -8,3 +8,5 @@ export const LOGOUT = "LOGOUT";
 export const ADD_ENTRY = "ADD_ENTRY";
 export const ENTRY_ERROR = "ENTRY_ERROR";
 export const GET_ENTRIES = "GET_ENTRIES";
+export const DELETE_ACCOUNT = "DELETE_ACCOUNT";
+export const DELETE_ACCOUNT_ERROR = "DELETE_ACCOUNT_ERROR";

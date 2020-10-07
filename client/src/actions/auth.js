@@ -7,6 +7,8 @@ import {
   USER_LOADED,
   AUTH_ERROR,
   LOGOUT,
+  DELETE_ACCOUNT,
+  DELETE_ACCOUNT_ERROR,
 } from "./types";
 import setAuthToken from "../utilities/setAuthToken";
 
@@ -98,4 +100,24 @@ export const registration = ({
 //Logout User
 export const logout = () => (send) => {
   send({ type: LOGOUT });
+};
+
+//Delete Account
+export const deleteAccount = () => async (send) => {
+  if (window.confirm("Are you sure? This cannot be undone.")) {
+    try {
+      await axios.delete(`/profile`);
+
+      send({ type: DELETE_ACCOUNT });
+      send(
+        alert(
+          "Your account and all of your information has been permanently deleted"
+        )
+      );
+    } catch (err) {
+      send({
+        type: DELETE_ACCOUNT_ERROR,
+      });
+    }
+  }
 };
