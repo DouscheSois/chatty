@@ -1,11 +1,9 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { deleteAccount } from "../actions/auth";
 
 const Profile = () => {
   const dispatch = useDispatch();
-
-  // useSelector((state) => state.auth);
 
   return (
     <div className="profile">

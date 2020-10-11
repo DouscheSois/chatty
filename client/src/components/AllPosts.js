@@ -2,19 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { getEntries } from "../actions/entry";
-import { loadUser } from "../actions/auth";
 
 import PostItem from "./PostItem";
 import Pagination from "./Pagination";
 
 const AllPosts = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(25);
+  const [limit] = useState(25);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const interval = setTimeout(() => {
+    setTimeout(() => {
       return dispatch(getEntries());
     }, 100);
   }, []);
