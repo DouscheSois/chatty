@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Footnote from "./components/Footnote";
 import Registration from "./components/Registration";
@@ -30,7 +30,7 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <div className="App">
-          <Navbar />
+          <Header />
           <Route exact path="/" component={Landing} />
           <Switch>
             <Route exact path="/registration" component={Registration} />

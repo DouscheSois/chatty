@@ -299,60 +299,6 @@
   background-color: #fff;
 }
 
-/* TOGGLE CSS */
-
-.dropdown-button {
-  background-color: white;
-  color: black;
-  border: none;
-  font-size: 3.45rem;
-}
-
-.dropdown-button i {
-  color: #333;
-  opacity: 1;
-}
-
-.dropdown-menu {
-  position: relative;
-  display: inline-block;
-  z-index: 2;
-}
-
-.dropdown-content {
-  border: 1px solid black;
-  text-align: center;
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: black;
-  color: white;
-  min-width: 20rem;
-  opacity: 0.8;
-}
-
-.dropdown-content a {
-  font-size: 1.6rem;
-  color: white;
-  padding: 1rem 1.2rem;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: white;
-  color: black;
-  opacity: 1;
-}
-
-.dropdown-menu:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-menu:hover .dropdown-button {
-  opacity: 1;
-}
-
 /* Footnote CSS */
 .footnote {
   display: flex;
