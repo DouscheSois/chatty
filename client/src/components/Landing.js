@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-import { Row, Col, Button, Jumbotron, Container } from "react-bootstrap";
+import { Row, Col, Card, Jumbotron, Container } from "react-bootstrap";
 
 import Mlk from "../media/mlk.jpeg";
 
@@ -12,12 +11,17 @@ const Landing = () => {
         <Col>
           <Jumbotron fluid>
             <Container className="py-3 text-center">
-              <img src={Mlk} alt="King" />
-              <h1>
-                Chatty is a safe platform where users can speak freely with
-                complete privacy
-              </h1>
-              <p>Login, or create an account, and start sharing!</p>
+              <Card.Img variant="top" src={Mlk} alt="King" />
+              <Card.Body>
+                <Card.Title>Martin Luther King Jr.</Card.Title>
+                <Card.Text>
+                  Chatty is a safe platform where users can speak freely with
+                  complete privacy
+                </Card.Text>
+                <Card.Text>
+                  Login, or create an account, and start sharing!
+                </Card.Text>
+              </Card.Body>
             </Container>
           </Jumbotron>
         </Col>

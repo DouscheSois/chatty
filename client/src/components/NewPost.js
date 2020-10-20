@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 
 import { addEntry } from "../actions/entry";
 
+import { Row, Col, Container, Form, Button } from "react-bootstrap";
+
 const NewPost = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatch();
@@ -16,25 +18,34 @@ const NewPost = () => {
   };
 
   return (
-    <div className="new-post-div">
-      <form
-        className="new-post-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          dispatch(addEntry({ text }));
-          setText("");
-        }}
-      >
-        <textarea
-          className="form-group"
-          placeholder="type here.."
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          onKeyPress={submit}
-        ></textarea>
-        <input type="submit" className="new-post-form-submit" value="Enter" />
-      </form>
-    </div>
+    <Row>
+      <Col xs={12} md={12}>
+        <Container>
+          <h1 className="text-center">Create New Post</h1>
+          <Form
+            onSubmit={(e) => {
+              e.preventDefault();
+              dispatch(addEntry({ text }));
+              setText("");
+            }}
+          >
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Control
+                as="textarea"
+                rows="4"
+                placeholder="type here..."
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+                onKeyPress={submit}
+              />
+              <Button type="submit" variant="primary">
+                Share
+              </Button>
+            </Form.Group>
+          </Form>
+        </Container>
+      </Col>
+    </Row>
   );
 };
 

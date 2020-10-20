@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
 
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
@@ -22,7 +21,7 @@ const Header = () => {
     <>
       <LinkContainer to="/registration">
         <Nav.Link>
-          <i className="fas fa-user"></i> Register
+          <i className="fas fa-user-plus"></i> Register
         </Nav.Link>
       </LinkContainer>
       <LinkContainer to="/login">
@@ -37,12 +36,12 @@ const Header = () => {
     <>
       <LinkContainer to="/wall">
         <Nav.Link>
-          <i className="fas fa-user"></i> Wall
+          <i className="fas fa-globe"></i> Wall
         </Nav.Link>
       </LinkContainer>
       <LinkContainer to="/profile">
         <Nav.Link>
-          <i className="fas fa-user"></i> Profile
+          <i className="fas fa-id-badge"></i> Profile
         </Nav.Link>
       </LinkContainer>
       <Nav.Link onClick={(e) => onClick(e)}>Logout</Nav.Link>

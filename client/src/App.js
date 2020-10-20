@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Landing from "./components/Landing";
@@ -11,6 +11,9 @@ import Profile from "./components/Profile";
 
 import PrivateRoute from "./components/PrivateRoute";
 import "./App.css";
+
+//Bootstrap
+import { Container } from "react-bootstrap";
 
 // Redux
 import { Provider } from "react-redux";
@@ -26,20 +29,21 @@ const App = () => {
   useEffect(() => {
     store.dispatch(loadUser());
   }, []);
+
   return (
     <Provider store={store}>
       <Router>
-        <div className="App">
-          <Header />
-          <Route exact path="/" component={Landing} />
-          <Switch>
+        <Header />
+        <main className="py-3">
+          <Container>
+            <Route exact path="/" component={Landing} />
             <Route exact path="/registration" component={Registration} />
             <Route exact path="/login" component={Login} />
             <PrivateRoute exact path="/wall" component={Wall} />
             <PrivateRoute exact path="/profile" component={Profile} />
-          </Switch>
-          <Footnote />
-        </div>
+          </Container>
+        </main>
+        <Footnote />
       </Router>
     </Provider>
   );

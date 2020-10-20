@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 
+import { Form, Button, Row, Col, Container } from "react-bootstrap";
+
 import { registration } from "../actions/auth";
 
 const Registration = () => {
@@ -34,73 +36,76 @@ const Registration = () => {
   }
 
   return (
-    <div className="registration">
-      <form className="registration-form" onSubmit={(e) => onSubmit(e)}>
-        <i className="fas fa-user-plus fa-2x"></i>
-        <h4 className="title">Create an Account!</h4>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="First Name"
-            name="firstName"
-            value={firstName}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="Last Name"
-            name="lastName"
-            value={lastName}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            value={email}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            minLength="6"
-            value={password}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            name="password2"
-            minLength="6"
-            value={password2}
-            onChange={(e) => onChange(e)}
-            required
-          />
-        </div>
-        <input
-          type="submit"
-          className="registration-form-submit"
-          value="Register"
-        />
-        <p>
-          Already have an account? <Link to="/login">Sign In</Link>
-        </p>
-        <small>*Any information you give to us will not be shared.</small>
-      </form>
-    </div>
+    <Container>
+      <Row className="justify-content-md-center">
+        <Col xd={12} md={6}>
+          <h1>Register</h1>
+          <Form onSubmit={(e) => onSubmit(e)}>
+            <Form.Group controlId="firstName">
+              <Form.Control
+                type="text"
+                placeholder="First Name"
+                name="firstName"
+                value={firstName}
+                onChange={(e) => onChange(e)}
+                required
+              ></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="lastName">
+              <Form.Control
+                type="text"
+                placeholder="Last Name"
+                name="lastName"
+                value={lastName}
+                onChange={(e) => onChange(e)}
+                required
+              ></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="email">
+              <Form.Control
+                type="email"
+                placeholder="email"
+                name="email"
+                value={email}
+                onChange={(e) => onChange(e)}
+                required
+              ></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="password">
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                name="password"
+                minLength="6"
+                value={password}
+                onChange={(e) => onChange(e)}
+                required
+              ></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="password2">
+              <Form.Control
+                type="password"
+                placeholder="Confirm Password"
+                name="password2"
+                minLength="6"
+                value={password2}
+                onChange={(e) => onChange(e)}
+                required
+              ></Form.Control>
+            </Form.Group>
+            <Button type="submit" variant="primary">
+              Register
+            </Button>
+          </Form>
+          <Row className="py-3">
+            <Col>
+              Already have an account?
+              <Link to="/login"> Login</Link>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

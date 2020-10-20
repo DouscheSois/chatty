@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Row, Col } from "react-bootstrap";
+
 const Pagination = ({ limit, totalEntries, paginate }) => {
   const pageNumbers = [];
 
@@ -8,21 +10,23 @@ const Pagination = ({ limit, totalEntries, paginate }) => {
   }
 
   return (
-    <nav className="pagination">
-      <ul>
-        {pageNumbers.map((number) => (
-          <li key={number} className="page-item">
-            <a
-              onClick={(e) => paginate(number, e)}
-              href="!#"
-              className="page-link"
-            >
-              {number}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <Row>
+        <Col className="page-col">
+          {pageNumbers.map((number) => (
+            <li key={number}>
+              <a
+                onClick={(e) => paginate(number, e)}
+                href="!#"
+                className="page-link bg-primary"
+              >
+                {number}
+              </a>
+            </li>
+          ))}
+        </Col>
+      </Row>
+    </>
   );
 };
 

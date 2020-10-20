@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { getEntries } from "../actions/entry";
 
+import { Row, Col, Container } from "react-bootstrap";
+
 import PostItem from "./PostItem";
 import Pagination from "./Pagination";
 
@@ -36,16 +38,22 @@ const AllPosts = () => {
   return isloading ? (
     <h1 className="loading">Loading...</h1>
   ) : (
-    <div className="all-posts">
-      {currentEntries.map((entry) => (
-        <PostItem entry={entry} key={entry._id} />
-      ))}
-      <Pagination
-        limit={limit}
-        totalEntries={entries.length}
-        paginate={newPaginate}
-      />
-    </div>
+    <>
+      <Row>
+        <Col>
+          <Container className="text-center py-2 bg-dark">
+            {currentEntries.map((entry) => (
+              <PostItem entry={entry} key={entry._id} />
+            ))}
+          </Container>
+          <Pagination
+            limit={limit}
+            totalEntries={entries.length}
+            paginate={newPaginate}
+          />
+        </Col>
+      </Row>
+    </>
   );
 };
 

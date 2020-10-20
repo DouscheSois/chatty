@@ -20,7 +20,7 @@ const Profile = () => {
           dispatch(deleteAccount());
         }}
       >
-        Delete Account
+        Delete Account <i class="fas fa-user-minus"></i>
       </button>
     </div>
   );
