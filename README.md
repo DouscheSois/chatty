@@ -6,8 +6,8 @@ HTML, CSS, JS, MERN, Heroku
 
 Live Link = https://calm-inlet-50295.herokuapp.com/
 
-<img src="client/src/media/thechatty.png" width="600" height="500">
-<img src="client/src/media/thechatty2.png" width="600" height="500">
+<img src="client/src/media/thechatty.png" width="550" height="500">
+<img src="client/src/media/thechatty2.png" width="550" height="500">
 <hr />
 
 <h3>Summary</h3>
