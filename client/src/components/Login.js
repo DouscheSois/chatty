@@ -1,73 +1,79 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
+import Loader from "./Loader";
+import Message from "./Message";
 
 import { login } from "../actions/auth";
 
 const Login = () => {
-  const isAuth = useSelector((state) => state.auth.isAuth);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const dispatch = useDispatch();
 
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  const userLogin = useSelector((state) => state.userLogin);
+  const { loading, error, userInfo } = userLogin;
 
-  const { email, password } = formData;
+  const redirect = location.search ? location.search.split("=")[1] : "/";
 
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  useEffect(() => {
+    if (userInfo) {
+      history.push(redirect);
+    }
+  }, [history, userInfo, redirect]);
 
-  const onSubmit = (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
     dispatch(login(email, password));
   };
 
-  if (isAuth) {
-    return <Redirect to="/wall" />;
-  }
-
   return (
-    <Container>
-      <Row className="justify-content-md-center">
-        <Col xs={12} md={6}>
-          <h1>Sign In</h1>
-          <Form onSubmit={(e) => onSubmit(e)}>
-            <Form.Group controlId="email">
-              <Form.Control
-                type="email"
-                name="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => onChange(e)}
-              ></Form.Control>
-            </Form.Group>
+    <FormContainer>
+      <h1>Sign In</h1>
+      {error && <Message variant="danger">{error}</Message>}
+      {loading && <Loader />}
+      <Form onSubmit={submitHandler}>
+        <Form.Group controlId="email">
+          <Form.Control
+            type="email"
+            name="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          ></Form.Control>
+        </Form.Group>
 
-            <Form.Group controlId="password">
-              <Form.Control
-                type="password"
-                name="password"
-                placeholder="Enter password"
-                minLength="6"
-                value={password}
-                onChange={(e) => onChange(e)}
-              ></Form.Control>
-            </Form.Group>
-            <Button type="submit" variant="primary">
-              Sign In
-            </Button>
-          </Form>
-          <Row className="py-3">
-            <Col>
-              Need have an account?
-              <Link to="/registration"> Register</Link>
-            </Col>
-          </Row>
+        <Form.Group controlId="password">
+          <Form.Control
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            minLength="6"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          ></Form.Control>
+        </Form.Group>
+        <Button type="submit" variant="primary">
+          Sign In
+        </Button>
+      </Form>
+      <Row className="py-3">
+        <Col>
+          Need have an account?
+          <Link
+            to={
+              redirect ? `/registration?redirect=${redirect}` : "/registration"
+            }
+          >
+            {" "}
+            Register
+          </Link>
         </Col>
       </Row>
-    </Container>
+    </FormContainer>
   );
 };
 
