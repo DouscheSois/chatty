@@ -1,20 +1,20 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Navbar } from "react-bootstrap";
 
 const Footnote = () => {
   return (
-    <footer>
+    <footer className="bg-dark py-4">
       <Container>
         <Row>
-          <Col className="text-center py-4 border-top">
-            <h4>© 2020 - A douschesois creation</h4>
-            <div className="footnote-links">
-              <a href="https://www.douschesois.com/">Website</a>|
-              <a href="https://www.linkedin.com/in/roger-alexander-37925619a/">
-                Linkedin
-              </a>
-              |<a href="https://github.com/DouscheSois">Github</a>
-            </div>
+          <Col className="text-center my-4">
+            <Navbar.Brand>
+              Made by: <a href="https://www.douschesois.com/">Douschesois</a>
+            </Navbar.Brand>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="text-center">
+            <Navbar.Text>Copyright &copy; 2021</Navbar.Text>
           </Col>
         </Row>
       </Container>

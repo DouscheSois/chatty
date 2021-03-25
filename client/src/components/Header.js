@@ -49,7 +49,13 @@ const Header = () => {
   );
 
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
+    <Navbar
+      className="py-4"
+      bg="primary"
+      variant="dark"
+      expand="lg"
+      collapseOnSelect
+    >
       <Container>
         <Navbar.Brand href="/">Chatty</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
