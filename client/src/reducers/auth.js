@@ -1,31 +1,3 @@
-import {
-  USER_LOADED,
-  AUTH_ERROR,
-  LOGIN_FAILURE,
-  LOGIN_REQUEST,
-  LOGIN_SUCCESS,
-  REGISTRATION_SUCCESS,
-  REGISTRATION_FAILURE,
-  LOGOUT,
-  DELETE_ACCOUNT,
-  DELETE_ACCOUNT_ERROR,
-} from "../actions/types";
-
-export const userLoginReducer = (state = {}, action) => {
-  switch (action.type) {
-    case LOGIN_REQUEST:
-      return { loading: true };
-    case LOGIN_SUCCESS:
-      return { loading: false, userInfo: action.payload };
-    case LOGIN_FAILURE:
-      return { loading: false, error: action.payload };
-    case LOGOUT:
-      return {};
-    default:
-      return state;
-  }
-};
-
 // export default function (state = initialState, action) {
 //   const { type, payload } = action;
 //

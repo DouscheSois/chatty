@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
-import Loader from "./Loader";
-import Message from "./Message";
+import FormContainer from "../components/FormContainer";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
 
-import { login } from "../actions/auth";
+import { login } from "../actions/userActions";
 
-const Login = () => {
+const Login = ({ location, history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
