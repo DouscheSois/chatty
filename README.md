@@ -2,6 +2,8 @@
 
 A small CRUD full-stack application where users can interact via posts.
 
+GOING UNDER RECONSTRUCTION
+
 HTML, CSS, JS, MERN, Heroku
 
 Live Link = https://calm-inlet-50295.herokuapp.com/
@@ -16,4 +18,3 @@ I built this app because I wanted to build a full stack application and test my 
 <h3>Author</h3>
 
 Roger Alexander - Full Stack Developer <a href="http://www.douschesois.com">Portfolio Website</a>
-
