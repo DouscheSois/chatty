@@ -1,10 +1,8 @@
 # Chatty
 
-A small CRUD full-stack application where users can interact via posts.
-
 GOING UNDER RECONSTRUCTION
 
-HTML, CSS, JS, MERN, Heroku
+<!-- HTML, CSS, JS, MERN, Heroku
 
 Live Link = https://calm-inlet-50295.herokuapp.com/
 
@@ -13,7 +11,7 @@ Live Link = https://calm-inlet-50295.herokuapp.com/
 <hr />
 
 <h3>Summary</h3>
-I built this app because I wanted to build a full stack application and test my skills. It took me a while to figure it and also googling most of the functionality but it worked out in the end. I learned a lot how the whole stack works together. I consider this my first big project and I am proud of the outcome. I know I can do better and will show it on my next application.
+I built this app because I wanted to build a full stack application and test my skills. It took me a while to figure it and also googling most of the functionality but it worked out in the end. I learned a lot how the whole stack works together. I consider this my first big project and I am proud of the outcome. I know I can do better and will show it on my next application. -->
 
 <h3>Author</h3>
 

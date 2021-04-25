@@ -1,21 +1,14 @@
 import React from "react";
+import Hero from "../components/sections/Hero";
 
-import { Row, Col, Card, Button, Container } from "react-bootstrap";
+import { Row, Col, Card, Button, Container, Jumbotron } from "react-bootstrap";
 
-import Mlk from "../media/mlk.jpeg";
-
-const Landing = () => {
+const HomeScreen = () => {
   return (
     <>
-      <Row>
-        <Col>
-          <Container className="py-3 text-center">
-            <h1>DOGE!</h1>
-          </Container>
-        </Col>
-      </Row>
+      <Hero className="illustration-section-01" />
     </>
   );
 };
 
-export default Landing;
+export default HomeScreen;
