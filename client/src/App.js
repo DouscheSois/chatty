@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 // Components
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import Navbar from "./components/Navbar";
 
 import HomeScreen from "./screens/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
@@ -17,15 +18,15 @@ const App = () => {
   return (
     <Router>
       <main>
-        <Header />
-        <Container>
-          <Route path="/" component={HomeScreen} exact />
-          <Route path="/login" component={LoginScreen} />
-          <Route path="/register" component={RegisterScreen} />
-          <Route path="/profile" component={ProfileScreen} />
-          <Route path="/admin/userlist" component={UserListScreen} />
-          <Route path="/admin/user/:id/edit" component={UserEditScreen} />
-        </Container>
+        <Navbar />
+
+        <Route path="/" component={HomeScreen} exact />
+        <Route path="/login" component={LoginScreen} />
+        <Route path="/register" component={RegisterScreen} />
+        <Route path="/profile" component={ProfileScreen} />
+        <Route path="/admin/userlist" component={UserListScreen} />
+        <Route path="/admin/user/:id/edit" component={UserEditScreen} />
+
         <Footer />
       </main>
     </Router>
