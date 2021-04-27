@@ -1,1 +1,8 @@
 
+keep working on the scss css.
+search sass vs functional compoennet
+
+
+
+continue to sass or the material theme?
+transform the sass css to react css? you can do it, seems achievable
