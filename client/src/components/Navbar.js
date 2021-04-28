@@ -1,19 +1,55 @@
 import React from "react";
+import { Route } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { LinkContainer } from "react-router-bootstrap";
+import { logout } from "../actions/userActions";
+import { Nav, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";
 import Marginer from "./Marginer";
 
 const Navbar = (props) => {
+  const dispatch = useDispatch();
+
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
+
+  const logoutHandler = () => {
+    dispatch(logout());
+  };
+
   return (
     <NavbarContainer>
       <BrandContainer>
         <Logo inline />
       </BrandContainer>
       <AccessibilityContainer>
-        <Button small>Get Started</Button>
+        {userInfo ? (
+          <NavDropdown title={"Welcome" + " " + userInfo.name} id="username">
+            <LinkContainer to="/profile">
+              <NavDropdown.Item>Profile</NavDropdown.Item>
+            </LinkContainer>
+            <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+          </NavDropdown>
+        ) : (
+          <>
+            <LinkContainer to="/register">
+              <Button small>Create an Account</Button>
+            </LinkContainer>
+            <LinkContainer to="/login">
+              <LoginButton>Sign In</LoginButton>
+            </LinkContainer>
+          </>
+        )}
         <Marginer direction="horizontal" margin="8px" />
-        <LoginButton small>Login</LoginButton>
+        {userInfo && userInfo.isAdmin && (
+          <NavDropdown title="Admin" id="adminmenu">
+            <LinkContainer to="/admin/userlist">
+              <NavDropdown.Item>Users</NavDropdown.Item>
+            </LinkContainer>
+          </NavDropdown>
+        )}
       </AccessibilityContainer>
     </NavbarContainer>
   );

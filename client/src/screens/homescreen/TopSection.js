@@ -2,13 +2,13 @@ import React from "react";
 import { Element, scroller } from "react-scroll";
 import styled from "styled-components";
 
-import BackgroundImg from "../assets/images/video-placeholder.jpg";
-import Button from "../components/Button";
-import DownArrow from "../components/DownArrow";
-import Logo from "../components/Logo";
-import Marginer from "../components/Marginer";
+import BackgroundImg from "../../assets/images/video-placeholder.jpg";
+import Button from "../../components/Button";
+import DownArrow from "../../components/DownArrow";
+import Logo from "../../components/Logo";
+import Marginer from "../../components/Marginer";
 
-const HomeScreen = (props) => {
+const TopSection = (props) => {
   const TopContainer = styled.div`
     width: 100%;
     height: 100vh;
@@ -55,8 +55,9 @@ const HomeScreen = (props) => {
           <Marginer direction="vertical" margin="4em" />
           <MotivationalText>Crypto Talk</MotivationalText>
           <MotivationalText>From the Best in the Industry</MotivationalText>
+          <MotivationalText>Under Reconstruction</MotivationalText>
           <Marginer direction="vertical" margin="2em" />
-          <Button>Start your Project</Button>
+          <Button>Start Mining Topics</Button>
           <DownArrowContainer onClick={scrollToNextSection}>
             <DownArrow />
           </DownArrowContainer>
@@ -66,4 +67,4 @@ const HomeScreen = (props) => {
   );
 };
 
-export default HomeScreen;
+export default TopSection;
