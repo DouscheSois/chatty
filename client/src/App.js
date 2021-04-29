@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Container } from "react-bootstrap";
+
 // Css
 import "./App.css";
 
 // Components
-import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/Navbar";
 
+// Screens
 import HomeScreen from "./screens/homescreen/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import LoginScreen from "./screens/LoginScreen";
