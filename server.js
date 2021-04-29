@@ -28,6 +28,8 @@ app.use(
   express.static(path.join(__dirname, "/client/src/assets"))
 );
 
+console.log(process.env.MONGO_URI);
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));
 
