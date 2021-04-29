@@ -1,9 +1,8 @@
 import React from "react";
-import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout } from "../actions/userActions";
-import { Nav, NavDropdown } from "react-bootstrap";
+import { NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";
@@ -26,7 +25,7 @@ const Navbar = (props) => {
       </BrandContainer>
       <AccessibilityContainer>
         {userInfo ? (
-          <NavDropdown title={"Welcome" + " " + userInfo.name} id="username">
+          <NavDropdown title={"Welcome " + userInfo.name} id="username">
             <LinkContainer to="/profile">
               <NavDropdown.Item>Profile</NavDropdown.Item>
             </LinkContainer>
