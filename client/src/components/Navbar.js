@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout } from "../actions/userActions";
-import { NavDropdown } from "react-bootstrap";
+import NavDropdown from "./NavDropdown";
 import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";
@@ -73,6 +73,7 @@ const AccessibilityContainer = styled.div`
 const LoginButton = styled(Button)`
   background-color: transparent;
   border: none;
+  color: #333;
 
   &:hover {
     background-color: transparent;

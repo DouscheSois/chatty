@@ -50,7 +50,7 @@ const LogoText = styled.div`
   margin-top: ${({ inline }) => (inline ? 0 : "6px")};
   font-size: ${({ inline, small }) =>
     inline ? "18px" : small ? "23px" : "40px"};
-  color: ${({ inline }) => (inline ? "#fff" : theme.primary)};
+  color: ${({ inline }) => (inline ? "#333" : theme.primary)};
   font-weight: 900;
 `;
 
