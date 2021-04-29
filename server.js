@@ -22,6 +22,9 @@ app.use(express.json());
 
 app.use("/api/users", userRoutes);
 
+const __dirname = path.resolve();
+app.use("/assets", express.static(path.join(__dirname, "/assets")));
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));
 

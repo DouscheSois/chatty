@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { LinkContainer } from "react-router-bootstrap";
 
 import BeemaLogo from "../assets/images/logo.svg";
 import { theme } from "../theme";
@@ -7,12 +8,14 @@ import { theme } from "../theme";
 const Logo = (props) => {
   const { inline, small } = props;
   return (
-    <LogoContainer inline={inline} small={small}>
-      <LogoImg src={BeemaLogo} inline={inline} small={small} />
-      <LogoText inline={inline} small={small}>
-        Chatty
-      </LogoText>
-    </LogoContainer>
+    <LinkContainer to="/">
+      <LogoContainer inline={inline} small={small}>
+        <LogoImg src={BeemaLogo} inline={inline} small={small} />
+        <LogoText inline={inline} small={small}>
+          Chatty
+        </LogoText>
+      </LogoContainer>
+    </LinkContainer>
   );
 };
 
@@ -20,6 +23,7 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: ${({ inline }) => (inline ? "row" : "column")};
   align-items: center;
+  cursor: pointer;
 `;
 
 const LogoImg = styled.img`

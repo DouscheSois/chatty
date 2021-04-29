@@ -21,14 +21,12 @@ const App = () => {
     <Router>
       <main>
         <Navbar />
-
         <Route path="/" component={HomeScreen} exact />
         <Route path="/login" component={LoginScreen} />
         <Route path="/register" component={RegisterScreen} />
         <Route path="/profile" component={ProfileScreen} />
         <Route path="/admin/userlist" component={UserListScreen} />
         <Route path="/admin/user/:id/edit" component={UserEditScreen} />
-
         <Footer />
       </main>
     </Router>
