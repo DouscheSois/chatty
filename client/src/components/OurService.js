@@ -21,7 +21,7 @@ const ServiceContainer = styled.div`
   margin-bottom: 4em;
   flex-wrap: wrap-reverse;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 850px) {
     justify-content: center;
   }
 `;

@@ -11,7 +11,6 @@ const HomeScreen = (props) => {
       <TopSection />
       <ServicesSection />
       <Marginer direction="vertical" margin="2em" />
-      <ReviewsSection />
     </PageContainer>
   );
 };

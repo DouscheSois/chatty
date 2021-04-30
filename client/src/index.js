@@ -3,17 +3,15 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import "./index.css";
-import { transitions, positions, Provider as AlertProvider } from "react-alert";
-import AlertTemplate from "react-alert-template-basic";
+import "./bootstrap.min.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <Provider store={store}>
-    <AlertProvider template={AlertTemplate}>
-      <App />
-    </AlertProvider>
+    <App />
   </Provider>,
+
   document.getElementById("root")
 );
 

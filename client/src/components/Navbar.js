@@ -2,7 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout } from "../actions/userActions";
-import NavDropdown from "./NavDropdown";
+
+import { NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";

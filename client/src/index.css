@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+main {
+  min-height: 60vh;
+}
+
 body {
   margin: 0;
   padding: 0;

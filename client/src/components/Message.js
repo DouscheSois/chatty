@@ -1,8 +1,7 @@
 import React from "react";
-import { useAlert } from "react-alert";
+import { Alert } from "react-bootstrap";
 
 const Message = ({ variant, children }) => {
-  const Alert = useAlert();
   return <Alert variant={variant}>{children}</Alert>;
 };
 

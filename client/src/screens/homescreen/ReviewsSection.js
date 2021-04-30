@@ -30,29 +30,29 @@ const ReviewsSection = (props) => {
         <Slider>
           <StyledSlide index={0}>
             <ReviewCard
-              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
-              username="John coner"
+              reviewText="I know what is like to jump!"
+              username="John Doe"
               userImgUrl={User1Img}
             />
           </StyledSlide>
           <StyledSlide index={1}>
             <ReviewCard
-              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
-              username="John coner"
+              reviewText="I use the dark to enter buildings"
+              username="Mac Kregon"
               userImgUrl={User2Img}
             />
           </StyledSlide>
           <StyledSlide index={2}>
             <ReviewCard
-              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
-              username="John coner"
+              reviewText="Bitcoin is good, ethereum is good too!"
+              username="Batista"
               userImgUrl={User3Img}
             />
           </StyledSlide>
           <StyledSlide index={3}>
             <ReviewCard
-              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
-              username="John coner"
+              reviewText="It doesnt matter all will go up!"
+              username="Mike Jones"
               userImgUrl={User4Img}
             />
           </StyledSlide>

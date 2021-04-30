@@ -12,28 +12,22 @@ import Service3Img from "../../assets/images/features-split-image-01.png";
 const ServicesSection = (props) => {
   return (
     <ServicesContainer name="servicesSection">
-      <SectionTitle>Best Quality Software</SectionTitle>
+      <SectionTitle>Chatty Insights</SectionTitle>
       <Marginer direction="vertical" margin="3em" />
       <OurService
-        title="Fully integrated services"
-        description="We build and deliver fully integrated webapps
-        with customized control panels that fit your
-        compnay needs"
+        title="Fully Integrated Software"
+        description="The Chatty team have built a secure and private platform where crypto maniacs can freely express themselves."
         imgUrl={Service1Img}
       />
       <OurService
-        title="Mobile optimized"
-        description="We build and deliver fully integrated webapps
-        with customized control panels that fit your
-        compnay needs"
+        title="About Us"
+        description="The Chatty team was assembled to stay sharp with modern day technology. We believe in crypto and have a vision for the future, we are simply adapting."
         imgUrl={Service2Img}
         isReversed
       />
       <OurService
-        title="Quality is our priority"
-        description="We have teams of professional developers, designers
-      and managers that ensures delivering the best
-      software quality for your company"
+        title="Focus and Goal"
+        description="The Chatty team is focused on quality and satisfactory user experience. Our goal is to be a competitive crypto talk platform.  "
         imgUrl={Service3Img}
       />
     </ServicesContainer>

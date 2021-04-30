@@ -55,7 +55,6 @@ const TopSection = (props) => {
           <Marginer direction="vertical" margin="4em" />
           <MotivationalText>Crypto Talk</MotivationalText>
           <MotivationalText>From the Best in the Industry</MotivationalText>
-          <MotivationalText>Under Reconstruction</MotivationalText>
           <Marginer direction="vertical" margin="2em" />
           <Button>Start Mining Topics</Button>
           <DownArrowContainer onClick={scrollToNextSection}>
