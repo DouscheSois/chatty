@@ -27,6 +27,9 @@ const Navbar = (props) => {
       <AccessibilityContainer>
         {userInfo ? (
           <NavDropdown title={"Welcome " + userInfo.name} id="username">
+            <LinkContainer to="/wall">
+              <NavDropdown.Item>Forum</NavDropdown.Item>
+            </LinkContainer>
             <LinkContainer to="/profile">
               <NavDropdown.Item>Profile</NavDropdown.Item>
             </LinkContainer>

@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import HomeScreen from "./screens/homescreen/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import LoginScreen from "./screens/LoginScreen";
+import WallScreen from "./screens/WallScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/login" component={LoginScreen} />
         <Route path="/register" component={RegisterScreen} />
         <Route path="/profile" component={ProfileScreen} />
+        <Route path="/wall" component={WallScreen} />
         <Route path="/admin/userlist" component={UserListScreen} />
         <Route path="/admin/user/:id/edit" component={UserEditScreen} />
       </main>
