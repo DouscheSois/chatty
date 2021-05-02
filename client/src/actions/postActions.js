@@ -3,7 +3,7 @@ import {
   ADD_POST_FAIL,
   ADD_POST_REQUEST,
   ADD_POST_SUCCESS,
-} from "../constants/userConstants";
+} from "../constants/postConstants";
 
 import Message from "../components/Message";
 
@@ -13,14 +13,20 @@ export const addPost = (formData) => async (dispatch) => {
       type: ADD_POST_REQUEST,
     });
 
-    const res = await api.post("/post", formData);
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const { data } = await axios.post("/api/posts/wall", { formData }, config);
 
     dispatch({
       type: ADD_POST_SUCCESS,
-      payload: res.data,
+      payload: data,
     });
-
-    dispatch(Message("Post Created", "success"));
+    console.log("success");
+    // dispatch(Message("Post Created", "success"));
   } catch (error) {
     dispatch({
       type: ADD_POST_FAIL,

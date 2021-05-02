@@ -12,7 +12,7 @@ const NewPost = () => {
   const submit = (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      dispatch(addEntry({ text }));
+      dispatch(addPost({ text }));
       setText("");
     }
   };
@@ -25,7 +25,7 @@ const NewPost = () => {
           <Form
             onSubmit={(e) => {
               e.preventDefault();
-              dispatch(addEntry({ text }));
+              dispatch(addPost({ text }));
               setText("");
             }}
           >

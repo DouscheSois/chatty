@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const postSchema = mongoose.Schema({
   user: {
-    type: Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
   },
   text: {
     type: String,
@@ -11,10 +11,10 @@ const postSchema = mongoose.Schema({
   name: {
     type: String,
   },
-  likes: [{ user: { type: Schema.Types.ObjectId } }],
+  likes: [{ user: { type: mongoose.Schema.Types.ObjectId } }],
   comments: [
     {
-      user: { type: Schema.Types.ObjectId },
+      user: { type: mongoose.Schema.Types.ObjectId },
       text: {
         type: String,
         required: true,

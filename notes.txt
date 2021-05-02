@@ -1,1 +1,1 @@
-post route almost done i think i havent check check later if working
+finish entry, wont let me create new entry, add protection to /wall

@@ -1,12 +1,14 @@
 import express from "express";
 import asyncHandler from "express-async-handler";
 import { validationResult } from "express-validator";
-import { protect } from "../authMiddleware";
 
 import User from "../models/userModel.js";
 import Post from "../models/postModel.js";
 
-const newPost = asyncHandler(async (req, res) => {
+// @desc    Creates new Post
+// @route   POST /api/posts
+// @access  Public
+const addPost = asyncHandler(async (req, res) => {
   const error = validationResult(req);
 
   if (!error.isEmpty()) {
@@ -30,4 +32,4 @@ const newPost = asyncHandler(async (req, res) => {
   }
 });
 
-export default newPost;
+export { addPost };
