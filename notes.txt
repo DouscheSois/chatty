@@ -1,1 +1,2 @@
-finish entry, wont let me create new entry, add protection to /wall
+finish routes for comments and likes, finish actions, then finish /wall to list all posts.
+i think /wall is still not protected
