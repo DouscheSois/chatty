@@ -7,7 +7,7 @@ import Post from "../models/postModel.js";
 
 // @desc    Creates new Post
 // @route   POST /api/posts
-// @access  Public
+// @access  Private
 const addPost = asyncHandler(async (req, res) => {
   const error = validationResult(req);
 
@@ -33,3 +33,28 @@ const addPost = asyncHandler(async (req, res) => {
 });
 
 export { addPost };
+
+// @desc    Fetch all posts
+// @route   GET /api/posts
+// @access  Private
+
+const getPosts = asyncHandler(async (req, res) => {
+  const pageSize = 10;
+  const page = Number(req.query.pageNumber) || 1;
+
+  const keyword = req.query.keyword
+    ? {
+        name: {
+          $regex: req.query.keyword,
+          $options: "i",
+        },
+      }
+    : {};
+
+  const count = await Post.countDocuments({ ...keyword });
+  const posts = await Post.find({ ...keyword })
+    .limit(pageSize)
+    .skip(pageSize * (page - 1));
+
+  res.json({ posts, page, pages: Math.ceil(count / pageSize) });
+});

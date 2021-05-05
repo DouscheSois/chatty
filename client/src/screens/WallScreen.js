@@ -9,7 +9,7 @@ import NewPost from "../components/NewPost";
 import { Row, Col, Container } from "react-bootstrap";
 
 const WallScreen = ({ history }) => {
-  const dispatch = dispatch();
+  const dispatch = useDispatch();
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
