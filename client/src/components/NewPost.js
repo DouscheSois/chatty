@@ -3,49 +3,46 @@ import { useDispatch } from "react-redux";
 
 import { addPost } from "../actions/postActions";
 
+import FormContainer from "../components/FormContainer";
 import { Row, Col, Container, Form, Button } from "react-bootstrap";
 
 const NewPost = () => {
   const [text, setText] = useState("");
   const dispatch = useDispatch();
 
-  const submit = (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
+  const submitHandler = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
       dispatch(addPost({ text }));
       setText("");
     }
   };
 
   return (
-    <Row>
-      <Col xs={12} md={12}>
-        <Container>
-          <h1 className="text-center">Create New Post</h1>
-          <Form
-            onSubmit={(e) => {
-              e.preventDefault();
-              dispatch(addPost({ text }));
-              setText("");
-            }}
-          >
-            <Form.Group controlId="exampleForm.ControlTextarea1">
+    <FormContainer>
+      <Row>
+        <Col md={12}>
+          <h2 className="text-center">Create New Post</h2>
+          <Form onSubmit={submitHandler}>
+            <Form.Group controlId="text">
               <Form.Control
+                type="text"
+                placeholder="Type here..."
                 as="textarea"
-                rows="4"
-                placeholder="type here..."
+                col="30"
+                rows="5"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                onKeyPress={submit}
+                required
               />
               <Button type="submit" variant="primary">
                 Share
               </Button>
             </Form.Group>
           </Form>
-        </Container>
-      </Col>
-    </Row>
+        </Col>
+      </Row>
+    </FormContainer>
   );
 };
 
