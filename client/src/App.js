@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 import HomeScreen from "./screens/homescreen/HomeScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import LoginScreen from "./screens/LoginScreen";
-import WallScreen from "./screens/WallScreen";
+import WallScreen from "./screens/wallscreen/WallScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";

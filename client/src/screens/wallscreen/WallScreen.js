@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { listPosts } from "../actions/postActions";
+import { listPosts } from "../../actions/postActions";
 
-import AllPosts from "../components/AllPosts";
-import NewPost from "../components/NewPost";
+import AllPosts from "../../components/AllPosts";
+import NewPost from "../../components/NewPost";
+import CustomTabs from "../../components/CustomTabs";
 
 import { Row, Col, Container } from "react-bootstrap";
 
@@ -25,8 +26,7 @@ const WallScreen = ({ history }) => {
     <Container>
       <Row className="justify-content-md-center">
         <Col xs={12} md={12}>
-          <NewPost />
-          <AllPosts />
+          <CustomTabs />
         </Col>
       </Row>
     </Container>
