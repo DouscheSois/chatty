@@ -4,6 +4,8 @@ import "react-tabs/style/react-tabs.css";
 
 import BitcoinChat from "./chats/BitcoinChat";
 import EthereumChat from "./chats/EthereumChat";
+import CardanoChat from "./chats/CardanoChat";
+import DogeChat from "./chats/DogeChat";
 
 const CustomTabs = () => {
   return (
@@ -21,10 +23,10 @@ const CustomTabs = () => {
         <EthereumChat />
       </TabPanel>
       <TabPanel>
-        <h2>Any content 3</h2>
+        <CardanoChat />
       </TabPanel>
       <TabPanel>
-        <h2>Any content 4</h2>
+        <DogeChat />
       </TabPanel>
     </Tabs>
   );
