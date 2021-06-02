@@ -10,32 +10,32 @@ import {
 
 import Message from "../components/Message";
 
-export const listPosts = (keyword = "", pageNumber = "") => async (
-  dispatch
-) => {
-  try {
-    dispatch({
-      type: GET_ALL_POSTS_REQUEST,
-    });
-
-    const { data } = await axios.get(
-      `/api/posts/wall?keyword=${keyword}&pageNumber=${pageNumber}`
-    );
-
-    dispatch({
-      type: GET_ALL_POSTS_SUCCESS,
-      payload: data,
-    });
-  } catch (error) {
-    dispatch({
-      type: GET_ALL_POSTS_FAIL,
-      payload: {
-        msg: error.response.statusText,
-        status: error.response.status,
-      },
-    });
-  }
-};
+// export const listPosts = (keyword = "", pageNumber = "") => async (
+//   dispatch
+// ) => {
+//   try {
+//     dispatch({
+//       type: GET_ALL_POSTS_REQUEST,
+//     });
+//
+//     const { data } = await axios.get(
+//       `/api/posts/wall?keyword=${keyword}&pageNumber=${pageNumber}`
+//     );
+//
+//     dispatch({
+//       type: GET_ALL_POSTS_SUCCESS,
+//       payload: data,
+//     });
+//   } catch (error) {
+//     dispatch({
+//       type: GET_ALL_POSTS_FAIL,
+//       payload: {
+//         msg: error.response.statusText,
+//         status: error.response.status,
+//       },
+//     });
+//   }
+// };
 
 export const addPost = (formData) => async (dispatch) => {
   try {

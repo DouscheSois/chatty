@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { listPosts } from "../../actions/postActions";
 
-import AllPosts from "../../components/AllPosts";
-import NewPost from "../../components/NewPost";
 import CustomTabs from "../../components/CustomTabs";
 
 import { Row, Col, Container } from "react-bootstrap";
@@ -16,7 +14,7 @@ const WallScreen = ({ history }) => {
 
   useEffect(() => {
     if (userInfo) {
-      dispatch(listPosts());
+      console.log("Here goes the dispatch all posts.");
     } else {
       history.push("/login");
     }

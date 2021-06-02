@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { addPost } from "../actions/postActions";
 
 import FormContainer from "../components/FormContainer";
-import { Row, Col, Container, Form, Button } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 
 const NewPost = () => {
   const [text, setText] = useState("");
@@ -15,6 +15,7 @@ const NewPost = () => {
       e.preventDefault();
       dispatch(addPost({ text }));
       setText("");
+      console.log("success?");
     }
   };
 
@@ -22,7 +23,7 @@ const NewPost = () => {
     <FormContainer>
       <Row>
         <Col md={12}>
-          <h2 className="text-center">Create New Post</h2>
+          <h2 className="text-center">Post New Post</h2>
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="text">
               <Form.Control
