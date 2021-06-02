@@ -1,7 +1,5 @@
 # Chatty
 
-GOING UNDER RECONSTRUCTION
-
 HTML, CSS, JS, MERN, Heroku
 
 <img src="client/src/media/thechatty.png" width="550" height="500">
