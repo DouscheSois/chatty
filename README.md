@@ -2,16 +2,13 @@
 
 GOING UNDER RECONSTRUCTION
 
-<!-- HTML, CSS, JS, MERN, Heroku
-
-Live Link = https://calm-inlet-50295.herokuapp.com/
+HTML, CSS, JS, MERN, Heroku
 
 <img src="client/src/media/thechatty.png" width="550" height="500">
-<img src="client/src/media/thechatty2.png" width="550" height="500">
 <hr />
 
 <h3>Summary</h3>
-I built this app because I wanted to build a full stack application and test my skills. It took me a while to figure it and also googling most of the functionality but it worked out in the end. I learned a lot how the whole stack works together. I consider this my first big project and I am proud of the outcome. I know I can do better and will show it on my next application. -->
+I built this app because I wanted to build a full stack application within the cryptocurrency space. It really is an ongoing project where I test out new ideas with functionality and methods. I plan to use Heroku for deployment in the future.
 
 <h3>Author</h3>
 
