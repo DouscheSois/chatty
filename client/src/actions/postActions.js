@@ -55,7 +55,7 @@ export const addPost = (formData) => async (dispatch) => {
       type: ADD_POST_SUCCESS,
       payload: data,
     });
-    console.log("success");
+    console.log("successAction");
     // dispatch(Message("Post Created", "success"));
   } catch (error) {
     dispatch({

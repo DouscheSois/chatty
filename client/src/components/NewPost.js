@@ -11,12 +11,10 @@ const NewPost = () => {
   const dispatch = useDispatch();
 
   const submitHandler = (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      dispatch(addPost({ text }));
-      setText("");
-      console.log("success?");
-    }
+    e.preventDefault();
+    dispatch(addPost({ text }));
+    setText("");
+    console.log("success?");
   };
 
   return (
