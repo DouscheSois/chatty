@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from "../utils/api";
 import {
   ADD_POST_FAIL,
   ADD_POST_REQUEST,
@@ -43,17 +43,11 @@ export const addPost = (formData) => async (dispatch) => {
       type: ADD_POST_REQUEST,
     });
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    const { data } = await axios.post("/api/posts/wall", { formData }, config);
+    const res = await api.post("/api/posts/wall", formData);
 
     dispatch({
       type: ADD_POST_SUCCESS,
-      payload: data,
+      payload: res.data,
     });
     console.log("successAction");
     // dispatch(Message("Post Created", "success"));
