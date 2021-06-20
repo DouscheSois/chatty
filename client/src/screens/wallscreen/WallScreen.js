@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { listPosts } from "../../actions/postActions";
+// import { listPosts } from "../../actions/postActions";
 
 import CustomTabs from "../../components/CustomTabs";
 

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Marginer from "../../components/Marginer";
 import TopSection from "./TopSection";
-import ReviewsSection from "./ReviewsSection";
+// import ReviewsSection from "./ReviewsSection";
 import ServicesSection from "./ServicesSection";
 
 const HomeScreen = (props) => {

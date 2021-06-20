@@ -5,3 +5,5 @@ i think /wall is still not protected
 product reducers -> post reducers.
 
 proxy error, backend problem most likely. check out next time
+
+re work the posts backend and frontend, sample from clone

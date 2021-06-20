@@ -9,39 +9,6 @@ import Logo from "../../components/Logo";
 import Marginer from "../../components/Marginer";
 
 const TopSection = (props) => {
-  const TopContainer = styled.div`
-    width: 100%;
-    height: 100vh;
-    padding: 0;
-    background-image: url(${BackgroundImg});
-    position: relative;
-  `;
-
-  const BackgroundFilter = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: rgba(55, 55, 55, 0.89);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  `;
-
-  const MotivationalText = styled.h1`
-    font-size: 34px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: #fff;
-    margin: 0;
-    text-align: center;
-  `;
-
-  const DownArrowContainer = styled.div`
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-  `;
-
   const scrollToNextSection = () => {
     scroller.scrollTo("serviceSection", { smooth: true, duration: 1500 });
   };
@@ -65,5 +32,38 @@ const TopSection = (props) => {
     </Element>
   );
 };
+
+const TopContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  background-image: url(${BackgroundImg});
+  position: relative;
+`;
+
+const BackgroundFilter = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: rgba(55, 55, 55, 0.89);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const MotivationalText = styled.h1`
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+`;
+
+const DownArrowContainer = styled.div`
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+`;
 
 export default TopSection;
