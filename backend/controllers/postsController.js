@@ -1,15 +1,16 @@
-// import express from "express";
-// import asyncHandler from "express-async-handler";
-// import { validationResult } from "express-validator";
-//
-// import User from "../models/userModel.js";
-// import Post from "../models/postModel.js";
-//
-// // @desc    Creates new Post
-// // @route   POST /api/posts
-// // @access  Private
-// const createNewPost = asyncHandler(async (req, res) => {
-//   console.log("post Controlller");
-// });
-//
-// export { createNewPost };
+import asyncHandler from "express-async-handler";
+import { validationResult } from "express-validator";
+
+import Post from "../models/postModel.js";
+import User from "../models/userModel.js";
+
+const createPost = asyncHandler(async (req, res) => {
+  const newPost = new Post({
+    text: req.body.text,
+  });
+
+  const createdPost = await newPost.save();
+  res.status(201).json(createdPost);
+});
+
+export { createPost };
