@@ -1,43 +1,43 @@
-// import {
-//   ADD_POST_FAIL,
-//   ADD_POST_REQUEST,
-//   ADD_POST_SUCCESS,
-//   GET_ALL_POSTS_FAIL,
-//   GET_ALL_POSTS_REQUEST,
-//   GET_ALL_POSTS_SUCCESS,
-//   UPDATE_LIKE_REQUEST,
-//   UPDATE_LIKE_FAIL,
-//   UPDATE_LIKE_SUCCESS,
-//   DELETE_POST_REQUEST,
-//   DELETE_POST_FAIL,
-//   DELETE_POST_SUCCESS,
-//   ADD_COMMENT_REQUEST,
-//   ADD_COMMENT_FAIL,
-//   ADD_COMMENT_SUCCESS,
-//   REMOVE_COMMENT_REQUEST,
-//   REMOVE_COMMENT_FAIL,
-//   REMOVE_COMMENT_SUCCESS,
-// } from "../constants/postConstants";
-//
-// // export const postsListReducer = (state = { posts: [] }, action) => {
-// //   switch (action.type) {
-// //     case GET_ALL_POSTS_REQUEST:
-// //       return { loading: true, posts: [] };
-// //     case GET_ALL_POSTS_SUCCESS:
-// //       return {
-// //         loading: false,
-// //         posts: action.payload.posts,
-// //         pages: action.payload.pages,
-// //         page: action.payload.page,
-// //       };
-// //
-// //     case GET_ALL_POSTS_FAIL:
-// //       return { loading: false, error: action.payload };
-// //
-// //     default:
-// //       return state;
-// //   }
-// // };
+import {
+  // ADD_POST_FAIL,
+  // ADD_POST_REQUEST,
+  // ADD_POST_SUCCESS,
+  GET_ALL_POSTS_FAIL,
+  GET_ALL_POSTS_REQUEST,
+  GET_ALL_POSTS_SUCCESS,
+  // UPDATE_LIKE_REQUEST,
+  // UPDATE_LIKE_FAIL,
+  // UPDATE_LIKE_SUCCESS,
+  // DELETE_POST_REQUEST,
+  // DELETE_POST_FAIL,
+  // DELETE_POST_SUCCESS,
+  // ADD_COMMENT_REQUEST,
+  // ADD_COMMENT_FAIL,
+  // ADD_COMMENT_SUCCESS,
+  // REMOVE_COMMENT_REQUEST,
+  // REMOVE_COMMENT_FAIL,
+  // REMOVE_COMMENT_SUCCESS,
+} from "../constants/postConstants";
+
+export const postsListReducer = (state = { posts: [] }, action) => {
+  switch (action.type) {
+    case GET_ALL_POSTS_REQUEST:
+      return { loading: true, posts: [] };
+    case GET_ALL_POSTS_SUCCESS:
+      return {
+        loading: false,
+        posts: action.payload.posts,
+        pages: action.payload.pages,
+        page: action.payload.page,
+      };
+
+    case GET_ALL_POSTS_FAIL:
+      return { loading: false, error: action.payload };
+
+    default:
+      return state;
+  }
+};
 //
 // export const postCreateReducer = (state = { posts: [] }) => {
 //   switch (action.type) {

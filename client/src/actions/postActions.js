@@ -1,12 +1,35 @@
-// import api from "../utils/api";
-// import {
-//   ADD_POST_FAIL,
-//   ADD_POST_REQUEST,
-//   ADD_POST_SUCCESS,
-//   // GET_ALL_POSTS_REQUEST,
-//   // GET_ALL_POSTS_FAIL,
-//   // GET_ALL_POSTS_SUCCESS,
-// } from "../constants/postConstants";
+import axios from "axios";
+import {
+  GET_ALL_POSTS_REQUEST,
+  GET_ALL_POSTS_FAIL,
+  GET_ALL_POSTS_SUCCESS,
+} from "../constants/postConstants";
+
+export const listPosts = (keyword = "", pageNumber = "") => async (
+  dispatch
+) => {
+  try {
+    dispatch({ type: GET_ALL_POSTS_REQUEST });
+
+    const { data } = await axios.get(
+      `/api/posts?keyword=${keyword}&pageNumber=${pageNumber}`
+    );
+
+    dispatch({
+      type: GET_ALL_POSTS_SUCCESS,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: GET_ALL_POSTS_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
 //
 // import { logout } from "./userActions";
 //
