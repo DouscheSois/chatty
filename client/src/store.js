@@ -12,6 +12,8 @@ import {
   userUpdateReducer,
 } from "./reducers/userReducers";
 
+import { postsListReducer } from "./reducers/postsReducer";
+
 const reducer = combineReducers({
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
@@ -20,6 +22,7 @@ const reducer = combineReducers({
   userList: userListReducer,
   userDelete: userDeleteReducer,
   userUpdate: userUpdateReducer,
+  postsList: postsListReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")

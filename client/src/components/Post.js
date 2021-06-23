@@ -4,19 +4,15 @@ import { Card } from "react-bootstrap";
 
 const Post = ({ post }) => {
   return (
-    <Card className="my-3 p-3 rounded">
-      <Card.Body>
-        <Link to={`/posts/${post._id}`}>
-          <Card.Title as="div">
-            <strong>{post.name}</strong>
-          </Card.Title>
-        </Link>
+    <>
+      <h1>
+        <strong>{post.name}</strong>
+      </h1>
 
-        <Card.Text as="div">
-          <strong>{post.text}</strong>
-        </Card.Text>
-      </Card.Body>
-    </Card>
+      <h1>
+        <strong>{post.text}</strong>
+      </h1>
+    </>
   );
 };
 

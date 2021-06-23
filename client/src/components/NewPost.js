@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
-import { addPost } from "../actions/postActions";
+// import { addPost } from "../actions/postActions";
 
 import { Row, Col } from "react-bootstrap";
 
@@ -12,7 +12,7 @@ const NewPost = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(addPost({ text }));
+    // dispatch(addPost({ text }));
     setText("");
     console.log("success?");
   };

@@ -13,3 +13,5 @@ try to change the postroute to router.post instead of router.router first/
 
 check wallscreen.js and post.js from components, i wrote the code to GET_ALL_POSTS
 but havent tested it yet.
+
+wallscreen.js is succesffully loading the posts on the page from the backend/api.
